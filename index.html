@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <title>Formularz</title>
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Pacifico" rel="stylesheet">
+    <link rel="stylesheet"
+          href="css/bootstrap.css">
+    <link rel="stylesheet"
+          href="css/style.css">
+</head>
+<body>
+<div class="form-area col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+    <h1>Order your Custom Cake</h1>
+    <p class="form-caption">
+        Design your Custom Cake for any occasion and pick it up from the nearby cafe!
+    </p>
+
+    <form id="custom-cake-form" class="col-md-6 col-md-offset-3">
+
+        <div class="location-selection">
+            <h3>
+                <label for="city">
+                    Step 1: Choose your city
+                </label>
+            </h3>
+            <select class="form-control" id="city" name="city" required>
+                <option value="" class="blank-city"></option>
+                <option>Warszawa</option>
+                <option>Gdańsk</option>
+                <option>Kraków</option>
+                <option>Wrocław</option>
+            </select><br>
+        </div>
+
+        <div class="cake-form-section">
+            <h3>
+                Step 3: Design your cake!
+            </h3>
+
+            <h4>
+                Choose the number of tiers
+            </h4>
+            <div class="tire-number">
+                <input type="radio" name="tiers" id="1tier" value="1" checked>
+                <label for="1tier"><img src="images/1tier-cake.svg">
+                    1 tier
+                </label>
+            </div>
+            <div class="tire-number">
+                <input type="radio" name="tiers" id="2tier" value="2">
+                <label for="2tier"><img src="images/2tier-cake.svg">
+                    2 tiers
+                </label>
+            </div>
+            <br>
+            <h4>
+                <label for="flavor-selection">
+                    Choose the flavor
+                </label>
+            </h4>
+            <select class="form-control" name="flavor" id="flavor-selection">
+                <option>Vanilla</option>
+                <option>Chocolate</option>
+                <option>Toffee</option>
+                <option>Carrot</option>
+            </select>
+
+            <h4>
+                Choose the toppings
+            </h4>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="icing-sugar" value="true">
+                    Icing sugar
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="marshmallows" value="true">
+                    Marshmallows
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="sprinkles" value="true">
+                    Colored Sprinkles
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" name="chocolate" value="true">
+                    Chocolate Chips
+                </label>
+            </div>
+            <h4>
+                <label for="inscription">
+                    Add some inscription if you like
+                </label>
+            </h4>
+            <input type="text"
+                   class="form-control"
+                   id="inscription"
+                   placeholder="Your inscription"
+                   name="inscription">
+
+            <h4>
+                <label for="request">
+                    Let us know if you have any special requests
+                </label>
+            </h4>
+            <textarea class="form-control" rows="3" placeholder="Your request" id="request" name="special-request"></textarea>
+
+            <h4>
+                <label for="client-name">
+                    Provide your name
+                </label>
+            </h4>
+            <input type="text"
+                   class="form-control letters-only"
+                   id="client-name"
+                   placeholder="Your name"
+                   name="client-name"
+                   required>
+
+            <h4>
+                <label for="client-mail">
+                    Provide your e-mail
+                </label>
+            </h4>
+            <input type="email"
+                   class="form-control"
+                   id="client-mail"
+                   placeholder="Your e-mail"
+                   name="client-mail"
+                   required>
+
+            <h4>
+                <label for="client-phone">
+                    Provide your phone number
+                </label>
+            </h4>
+            <input type="tel"
+                   class="form-control"
+                   id="client-phone"
+                   placeholder="Your phone number"
+                   name="client-phone"
+                   required>
+
+            <div class="submit-form">
+                <h4>
+                    Submit your order!
+                </h4>
+                <input type="submit" class="btn btn-default">
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyALhPumA5uscLMGzEDdxd9ZBPle6i4B59M&libraries=places"></script>
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
