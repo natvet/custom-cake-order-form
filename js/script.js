@@ -41,7 +41,7 @@ $(document).ready(function () {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
             $('.location-selection')
                 .append('<div id="cafe-selection">' +
-                    '<label for="cafe-options"><h3>Step 2: Choose your cafe:</h3></label>' +
+                    '<h3><label for="cafe-options">Step 2: Choose your cafe:</label></h3>' +
                     '<select class="form-control" id="cafe-options" name="chosen-cafe" required>' +
                     '<option class="blank-cafe"></option></select></div>');
             for (var i = 0; i < results.length; i++) {
